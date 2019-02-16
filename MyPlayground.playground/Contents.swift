@@ -19,4 +19,4 @@ func natural(_ array: [Int], _ count: Int) -> [Int] {
 }
 
 var naturalArray: [Int] = []
-print(natural(naturalArray, 1))
+print(natural(naturalArray, 10))
