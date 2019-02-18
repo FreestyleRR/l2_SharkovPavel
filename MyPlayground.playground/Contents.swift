@@ -1,8 +1,3 @@
-import UIKit
-
-//Задача №6
-//Звписать 100 простых чисел в массив
-
 func natural(_ count: Int) -> [Int] {
     let count1 = count
     var natArray: [Int] = []
@@ -13,21 +8,36 @@ func natural(_ count: Int) -> [Int] {
             n+=1
         }
     }
-    var p = natArray[0]
+    var p = 2
     var c = 2
-    
-    while c < count1 {
-        let d = c * p
-        natArray.remove(at: d)
-        c+=p
-    }
-    for i in natArray {
-        if natArray[i] > p {
-            p = natArray[i]
+    var t = 0
+    var v = 0
+    while v < count1 {
+        let g = c * p
+        if g < count1 {
+            while c * p <= count1 {
+                for i in natArray {
+                    if natArray[i] % 
+                }
+                natArray.remove(at: <#T##Int#>)
+                c+=1
+            }
+            c = 2
+            while t < count1 {
+                if natArray[t] > p {
+                    p = natArray[t]
+                    break
+                } else {
+                    t+=1
+                }
+            }
+            t = 0
+            v+=1
+        } else {
+            break
         }
     }
     return natArray
 }
 
-let arr: [Int] = natural(1)
-print(arr)
+print(natural(20))
