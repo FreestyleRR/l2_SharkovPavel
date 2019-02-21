@@ -4,6 +4,11 @@ enum Engine {
     case on, off
 }
 
+enum actionEngine {
+    case start
+    case turnOff
+}
+
 enum Windows {
     case open, close
 }
@@ -23,15 +28,15 @@ struct Hunday {
     var yearOfRelease: Int
     var obemKuz: Kuzov
     var engine: Engine
+    var actEngine: actionEngine
     var windows: Windows
     var obemFullKuz: Double
     
-    mutating func windowsOpen(){
-        self.windows = .open
-    }
-    mutating func windowsClose(){
-        self.windows = .close
-    }
+    mutating func actionEng(action: Engine){
+        if action == .on {
+            self.actEngine = .start
+        } else if action == .off {
+            self.actEngine = .turnOff
+        }
+   }
 }
-
-
