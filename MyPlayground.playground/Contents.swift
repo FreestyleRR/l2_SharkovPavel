@@ -32,7 +32,7 @@ struct Hunday {
     var obemFullKuz: Double
     
     mutating func actionEng(action: actionEngine){
-        switch actionEngine {
+        switch action {
         case .start:
             self.engine = .on
         default:
