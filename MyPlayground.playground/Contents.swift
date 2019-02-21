@@ -26,8 +26,11 @@ struct Hunday {
     var windows: Windows
     var obemFullKuz: Double
     
-    mutating func Count(countObem: Double){
-        self.obemKuz = .chastKuz(kg: countObem)
+    mutating func windowsOpen(){
+        self.windows = .open
+    }
+    mutating func windowsClose(){
+        self.windows = .close
     }
 }
 
