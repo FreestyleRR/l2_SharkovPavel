@@ -28,15 +28,14 @@ struct Hunday {
     var yearOfRelease: Int
     var obemKuz: Kuzov
     var engine: Engine
-    var actEngine: actionEngine
     var windows: Windows
     var obemFullKuz: Double
     
-    mutating func actionEng(action: Engine){
-        if action == .on {
-            self.actEngine = .start
-        } else if action == .off {
-            self.actEngine = .turnOff
+    mutating func actionEng(action: actionEngine){
+        if action == .start {
+            self.engine = .on
+        } else if action == .turnOff {
+            self.engine = .off
         }
    }
 }
